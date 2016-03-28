@@ -2,6 +2,7 @@
 
 set_error_handler("customError");
 
+// YouTube Video model class
 class YTVid
 {
 	public $id = '';
@@ -19,6 +20,12 @@ function customError ($errno, $errstr)
 	die();
 }
 
+// Builds an array of video IDs for the N most viewed videos.
+
+// Parameters:
+// DEV_KEY: The Google API Key
+// num_vids_to_get: How many videos to get (N).
+// Returns: The array of video IDs
 function getArrayOfideoIDs ($DEV_KEY, $num_vids_to_get)
 {
 	// array of videos so far
@@ -76,8 +83,13 @@ function getArrayOfideoIDs ($DEV_KEY, $num_vids_to_get)
 	return $videoIDs;
 }
 
-// get the stats for each video
-// Each call can only have a max of 50 vid IDs
+// Get the stats for each video in the passed in array.
+// Each call to Google can only have a max of 50 vid IDs
+
+// Parameters:
+// DEV_KEY: The Google API Key
+// videoIDs: Array of video IDs
+// Returns: An array of type YTVid
 function getStatsForEachVideo ($DEV_KEY, $videoIDs)
 {
 	$ytVidData = array();
@@ -187,6 +199,7 @@ function getStatsForEachVideo ($DEV_KEY, $videoIDs)
 	return $ytVidData;
 }
 
+// Writes out all the HTML
 function writeOutHTML ($ytVidData, $num_vids_to_get, $yearsStr)
 {
 	echo '<!DOCTYPE html>';
@@ -245,6 +258,7 @@ function writeOutHTML ($ytVidData, $num_vids_to_get, $yearsStr)
 	echo '</html>';
 }
 
+// Main entry point function
 function main ()
 {
 	// Get the Google API key from the URL
