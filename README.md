@@ -8,13 +8,16 @@ What is this?
 Now that there are videos on YouTube that have 1 billion+ views, 
 I was really curious as to how much time, in total, has been spent watching/listening to these videos.
 
-As of 3/28/2016
-	- There are 22 videos on YouTube with 1 billon or more views.
-	- All these videos combined have been played for a total of 365,621.98 Years!
+As of 3/29/2016
+---------------
+- There are 22 videos on YouTube with 1 billon or more views.
+- All these videos combined have been played for a total of 368,616.76 Years!
 
+
+### List of top 22 videos
 
 | # | Title | Duration (Seconds) | Total Views |
-|---|-------|--------------------|-------------|
+|:-:|-------|:------------------:|:-----------:|
 |1|PSY - GANGNAM STYLE(강남스타일) M/V|253|2,546,788,957|
 |2|Wiz Khalifa - See You Again ft. Charlie Puth [Official Video] Furious 7 Soundtrack|238|1,602,084,860|
 |3|Taylor Swift - Blank Space|273|1,540,160,961|
@@ -41,9 +44,11 @@ As of 3/28/2016
 Usage
 -----
 - Follow the instructions [here] (https://developers.google.com/youtube/v3/getting-started) in order to create a project and obtain a key.
-- Load the youtube.php and the css folder to your server.
+- Load the [youtube.php] (youtube.php) and the css folder to your server.
 - Call the php file.
-	For example: http://{your-domain}.com/youtube.php?key={your-google-key}&num_vids_to_get=10
+```
+For example: http://{your-domain}.com/youtube.php?key={your-google-key}&num_vids_to_get=10
+```
 
 License
 -------
