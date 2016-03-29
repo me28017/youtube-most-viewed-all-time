@@ -1,4 +1,5 @@
 <?php
+/* Copyright (c) 2016 Michael Markidis; Licensed MIT */
 
 set_error_handler("customError");
 
@@ -241,11 +242,13 @@ function writeOutHTML ($ytVidData, $num_vids_to_get, $yearsStr)
 	foreach ($ytVidData as $vid)
 	{
 		$vidURL = 'https://www.youtube.com/watch?v=' . $vid->id;
+		$tv = number_format($vid->totalViews, 0, '', ',');
+
 		echo '<tr>';
 		echo '<td>' . $ct++ . '</td>';
 		echo '<td><a target="_blank" href="' . $vidURL . '">' . $vid->title . '</a></td>';
 		echo '<td>' . $vid->durationStr . '</td>';
-		echo '<td>' . $vid->totalViews . '</td>';
+		echo '<td>' . $tv . '</td>';
 		echo '</tr>';
 	}
 

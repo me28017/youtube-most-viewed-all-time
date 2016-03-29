@@ -4,17 +4,14 @@ Lists the most viewed videos of all time on Youtube.
 What is this?
 -------------
 - Just a fun Saturday afternoon project.
-
-Now that there are videos on YouTube that have 1 billion+ views, 
-I was really curious as to how much time, in total, has been spent watching/listening to these videos.
+- Now that there are several videos on YouTube with 1 billion+ views, I was really curious as to how much time, in total, has been spent watching/listening to these videos.
 
 As of 3/29/2016
 ---------------
 - There are 22 videos on YouTube with 1 billon or more views.
 - All these videos combined have been played for a total of 368,616.76 Years!
 
-
-### List of top 22 videos
+### List of top 22 most viewed videos on YouTube
 
 | # | Title | Duration (Seconds) | Total Views |
 |:-:|-------|:------------------:|:-----------:|
@@ -44,7 +41,8 @@ As of 3/29/2016
 Usage
 -----
 - Follow the instructions [here] (https://developers.google.com/youtube/v3/getting-started) in order to create a project and obtain a key.
-- Load the [youtube.php] (youtube.php) and the css folder to your server.
+- Load the [youtube.php] (youtube.php) to your server.
+- (Optional) Load the [css] (css) folder to your server.
 - Call the php file.
 ```
 For example: http://{your-domain}.com/youtube.php?key={your-google-key}&num_vids_to_get=10
